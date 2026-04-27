@@ -25,8 +25,9 @@
 
 }
 
-/* Global Styles
+/* Global Styles 
 ---------------------------------------*/
+/* Alternative box model */
 html {
     box-sizing: border-box;
 }
@@ -45,6 +46,7 @@ body {
 body {
     margin: 0;
     padding: 0;
+    font-family: "Noto Sans", sans-serif;
 }
 
 a {
@@ -56,6 +58,8 @@ h2,
 h3,
 h4 {
     margin: 0;
+    font-family: "Bitter", serif;
+
 }
 
 .bg-dark a,
@@ -93,7 +97,7 @@ h4 {
     max-width: 800px;
     border-radius: 10px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 60px;
 }
 
 .bitter-wild {
@@ -110,16 +114,28 @@ header {
     height: 80%;
     background-image: linear-gradient(rgba(89, 14, 18, .5),
             rgba(89, 14, 18, 0.5)),
-        url(../images/dac-bg-FP.png);
+        url(/assets/images/dac-bg-FP.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+
 }
 
 .nav-list {
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
 .nav-list a {
