@@ -3,7 +3,7 @@ import "../styles/global.css";
 import { Image } from "astro:assets";
 import World from "../images/dac-worldBuilding.webp";
 import Combat from "../images/dac-combat.webp";
-import Construct from "../images/dac-construct.webp";
+import CommArts from "../images/dac-commArts.webp";
 ---
 
 <html lang="en">
@@ -16,15 +16,17 @@ import Construct from "../images/dac-construct.webp";
     <div class="product-grid">
       <div class="product-card" ; onclick="window.location.href='/'">
         <Image src={World} alt="worldBuilding" />
-        <h3 class="product-card--label">Culture Displaces Campaigns</h3>
+        <h3 class="product-card--label">
+          From Product and Service to Relationships
+        </h3>
       </div>
       <div class="product-card" ; onclick="window.location.href='/combat'">
         <Image src={Combat} alt="brandCombat" />
         <h3 class="product-card--label">Brand Architecture as Weaponry</h3>
       </div>
       <div class="product-card">
-        <Image src={Construct} alt="construction" />
-        <h3 class="product-card--label">Coming Soon!</h3>
+        <Image src={CommArts} alt="construction" />
+        <h3 class="product-card--label">Visual Communication and Semiotics</h3>
       </div>
     </div>
   </body>
