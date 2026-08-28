@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
+import basicSsl from '@vitejs/plugin-basic-ssl';
 
 export default defineConfig({
   output: 'server',
@@ -9,10 +10,8 @@ export default defineConfig({
   }),
 
   vite: {
-    // Force compatibility mode
-    optimizeDeps: {
-      rolldownOptions: {}
-    },
+    plugins: [basicSsl()]
+  },
 
     // Stronger warning suppression
     config: {
@@ -36,4 +35,4 @@ export default defineConfig({
       noExternal: ['@astrojs/cloudflare'],
     },
   },
-});
+);
