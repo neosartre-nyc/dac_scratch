@@ -10,17 +10,7 @@ export default defineConfig({
   }),
 
   vite: {
-    plugins: [basicSsl()]
-  },
-
-    // Stronger warning suppression
-    config: {
-      onwarn(warning, warn) {
-        if (warning.message?.includes('optimizeDeps.rolldownOptions')) return;
-        warn(warning);
-      },
-    },
-
+    plugins: [basicSsl()],
     build: {
       rollupOptions: {
         onwarn(warning, warn) {
@@ -29,10 +19,12 @@ export default defineConfig({
         },
       },
     },
-
-    // Important for the moduleType error
     ssr: {
       noExternal: ['@astrojs/cloudflare'],
     },
   },
-);
+
+  markdown: {
+    syntaxHighlight: 'shiki',
+  },
+});
